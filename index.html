@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background- color</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+   <div class="container">
+    <div id="back">
+        <p id="design">Background Color: </p>
+        <button id="but" onclick="change()"></button>
+    </div>
+    <button id="button" onclick="change()">Click Here</button>
+   </div>
+   <script>
+        let arr=["red","blue","green","pink","orange"];
+        let i=0;
+        function change()
+        {
+             const back=document.getElementById("design");
+             const txt=document.getElementById("design");
+             const bt=document.getElementById("button");
+             document.getElementById('design').style.backgroundColor=arr[i];
+             bt.style.backgroundColor=arr[i];
+             back.style.backgroundColor=arr[i];
+             if(arr[i]=="red")
+             {
+                back.style.backgroundColor="red";
+                txt.innerText="Red";
+             }
+             else if(arr[i]=="blue")
+             {
+                back.style.backgroundColor="blue"
+                txt.innerText="Blue";
+             }
+             else if(arr[i]=="green")
+             {
+                back.style.backgroundColor="green"
+                txt.innerText="Green";
+             }
+             else if(arr[i]=="pink")
+             {
+                back.style.backgroundColor="pink"
+                txt.innerText="Pink";
+             }
+             else if(arr[i]=="orange")
+             {
+                back.style.backgroundColor="orange"
+                txt.innerText="Orange";
+             }  
+             i=(i+1)%arr.length;
+}
+   </script>
+</body>
+</html>
